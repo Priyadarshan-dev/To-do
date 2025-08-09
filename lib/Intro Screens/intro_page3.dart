@@ -13,24 +13,7 @@ class IntroPage3 extends StatelessWidget {
         backgroundColor: Colors.black,
         body: Column(
           children: [
-            Row(
-              children: [
-                GestureDetector(
-                  onTap: () {},
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 20,
-                      vertical: 20,
-                    ),
-                    child: Text(
-                      "SKIP",
-                      style: TextStyle(fontSize: 18, color: Colors.grey[300]),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-            SizedBox(height: 350),
+            SizedBox(height: 50),
             Text(
               "Orgonaize your tasks",
               style: TextStyle(
@@ -44,7 +27,7 @@ class IntroPage3 extends StatelessWidget {
               "    You can organize your daily tasks by\nadding your tasks into separate categories",
               style: TextStyle(color: Colors.white),
             ),
-            SizedBox(height: 140),
+            SizedBox(height: 90),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [

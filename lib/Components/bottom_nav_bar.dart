@@ -32,25 +32,53 @@ class _BottomNavBarState extends State<BottomNavBar> {
     return Scaffold(
       body: _pages[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.grey.shade900,
         currentIndex: _selectedIndex,
         onTap: _navigateBottomBar,
         type: BottomNavigationBarType.fixed,
         items: [
           BottomNavigationBarItem(
-            icon: Icon(Icons.home,),
+            icon: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 30,vertical: 10),
+              child: Image.asset(
+                "assets/images/index.png",
+                color: Colors.white,
+                height: 30,
+              ),
+            ),
             label: "Home",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.calendar_month),
+            icon: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 30,vertical: 10),
+              child: Image.asset(
+                "assets/images/calendar.png",
+                color: Colors.white,
+                height: 30,
+              ),
+            ),
             label: "Calendar",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.lock_clock),
+            icon: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 30,vertical: 10),
+              child: Image.asset(
+                "assets/images/clock-five.png",
+                color: Colors.white,
+                 height: 30,
+              ),
+            ),
             label: "focus",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person),
+            icon: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 30,vertical: 10),
+              child: Image.asset(
+                "assets/images/user.png",
+                color: Colors.white,
+                 height: 30,
+              ),
+            ),
             label: "Profile",
           ),
         ],

@@ -93,12 +93,7 @@ class _LoginScreenState extends State<LoginScreen> {
             TextForm(hintText: '. . . . . . . . . .', obscureText: true),
             SizedBox(height: 50),
             GestureDetector(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => LoginScreen()),
-                );
-              },
+              onTap: () {},
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 25),
                 child: Container(

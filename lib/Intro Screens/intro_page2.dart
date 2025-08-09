@@ -9,24 +9,7 @@ class IntroPage2 extends StatelessWidget {
       backgroundColor: Colors.black,
       body: Column(
         children: [
-          Row(
-            children: [
-              GestureDetector(
-                onTap: () {},
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 20,
-                    vertical: 20,
-                  ),
-                  child: Text(
-                    "SKIP",
-                    style: TextStyle(fontSize: 18, color: Colors.grey[300]),
-                  ),
-                ),
-              ),
-            ],
-          ),
-          SizedBox(height: 350),
+            SizedBox(height: 50),
           Text(
             "Create daily routine",
             style: TextStyle(
@@ -40,7 +23,7 @@ class IntroPage2 extends StatelessWidget {
             "       In Uptodo you can create your\npersonalized routine to stay Productive",
             style: TextStyle(color: Colors.white),
           ),
-          SizedBox(height: 140),
+           SizedBox(height: 90),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [

@@ -9,24 +9,8 @@ class IntroPage extends StatelessWidget {
       backgroundColor: Colors.black,
       body: Column(
         children: [
-          Row(
-            children: [
-              GestureDetector(
-                onTap: () {},
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 20,
-                    vertical: 20,
-                  ),
-                  child: Text(
-                    "SKIP",
-                    style: TextStyle(fontSize: 18, color: Colors.grey[300]),
-                  ),
-                ),
-              ),
-            ],
-          ),
-          SizedBox(height: 350),
+          
+          SizedBox(height: 50),
           Text(
             "Manage your tasks",
             style: TextStyle(
@@ -40,14 +24,17 @@ class IntroPage extends StatelessWidget {
             "You can easily manage all of your daily\n           tasks in DoMe for free",
             style: TextStyle(color: Colors.white),
           ),
-           SizedBox(height: 140),
+          SizedBox(height: 90),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               GestureDetector(
                 onTap: () {},
                 child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 20),
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 20,
+                    vertical: 20,
+                  ),
                   child: Text(
                     "BACK",
                     style: TextStyle(fontSize: 18, color: Colors.white),
@@ -57,7 +44,10 @@ class IntroPage extends StatelessWidget {
               GestureDetector(
                 onTap: () {},
                 child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 20),
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 20,
+                    vertical: 20,
+                  ),
                   child: Container(
                     height: 40,
                     width: 80,
