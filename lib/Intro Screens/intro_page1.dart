@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class IntroPage2 extends StatelessWidget {
-  const IntroPage2({super.key});
+
+class IntroPage1 extends StatelessWidget {
+  const IntroPage1({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +13,7 @@ class IntroPage2 extends StatelessWidget {
         children: [
           SizedBox(height: 50),
           Text(
-            "Create daily routine",
+            "Manage your tasks",
             style: GoogleFonts.lato(
               fontSize: 30,
               fontWeight: FontWeight.bold,
@@ -21,7 +22,7 @@ class IntroPage2 extends StatelessWidget {
           ),
           SizedBox(height: 30),
           Text(
-            "       In Uptodo you can create your\npersonalized routine to stay Productive",
+            "You can easily manage all of your daily\n                tasks in DoMe for free",
             style: GoogleFonts.lato(color: Colors.white),
           ),
           SizedBox(height: 90),
@@ -29,7 +30,9 @@ class IntroPage2 extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               GestureDetector(
-                onTap: () {},
+                onTap: () {
+      
+                },
                 child: Padding(
                   padding: const EdgeInsets.symmetric(
                     horizontal: 20,
@@ -45,7 +48,9 @@ class IntroPage2 extends StatelessWidget {
                 ),
               ),
               GestureDetector(
-                onTap: () {},
+                onTap: () {
+                 
+                },
                 child: Padding(
                   padding: const EdgeInsets.symmetric(
                     horizontal: 20,

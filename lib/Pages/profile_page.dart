@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({super.key});
@@ -16,7 +17,7 @@ class ProfilePage extends StatelessWidget {
               children: [
                 Text(
                   "Profile",
-                  style: TextStyle(
+                  style: GoogleFonts.lato(
                     color: Colors.white,
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
@@ -44,7 +45,7 @@ class ProfilePage extends StatelessWidget {
               children: [
                 Text(
                   "Priyadarshan",
-                  style: TextStyle(color: Colors.white, fontSize: 19),
+                  style: GoogleFonts.lato(color: Colors.white, fontSize: 19),
                 ),
               ],
             ),
@@ -52,7 +53,10 @@ class ProfilePage extends StatelessWidget {
               children: [
                 Padding(
                   padding: const EdgeInsets.only(left: 20, top: 20),
-                  child: Text("Account", style: TextStyle(color: Colors.white)),
+                  child: Text(
+                    "Account",
+                    style: GoogleFonts.lato(color: Colors.white),
+                  ),
                 ),
               ],
             ),
@@ -78,7 +82,7 @@ class ProfilePage extends StatelessWidget {
                           title: Center(
                             child: Text(
                               "Change account name",
-                              style: TextStyle(
+                              style: GoogleFonts.lato(
                                 color: Colors.white,
                                 fontSize: 20,
                               ),
@@ -99,7 +103,9 @@ class ProfilePage extends StatelessWidget {
                               onTap: () {},
                               child: Text(
                                 "Cancel",
-                                style: TextStyle(color: Colors.deepPurple),
+                                style: GoogleFonts.lato(
+                                  color: Colors.deepPurple,
+                                ),
                               ),
                             ),
                             SizedBox(width: 50),
@@ -115,7 +121,9 @@ class ProfilePage extends StatelessWidget {
                                 child: Center(
                                   child: Text(
                                     "Edit",
-                                    style: TextStyle(color: Colors.white),
+                                    style: GoogleFonts.lato(
+                                      color: Colors.white,
+                                    ),
                                   ),
                                 ),
                               ),
@@ -127,10 +135,10 @@ class ProfilePage extends StatelessWidget {
                   },
                   child: Text(
                     "Change account name",
-                    style: TextStyle(color: Colors.white),
+                    style: GoogleFonts.lato(color: Colors.white),
                   ),
                 ),
-                SizedBox(width: 146),
+                SizedBox(width: 150),
                 Image.asset(
                   "assets/images/angle-small-right.png",
                   color: Colors.white,
@@ -160,7 +168,7 @@ class ProfilePage extends StatelessWidget {
                           title: Center(
                             child: Text(
                               "Change account Password",
-                              style: TextStyle(
+                              style: GoogleFonts.lato(
                                 color: Colors.white,
                                 fontSize: 18,
                               ),
@@ -176,7 +184,9 @@ class ProfilePage extends StatelessWidget {
                                   SizedBox(width: 5),
                                   Text(
                                     "Enter old password",
-                                    style: TextStyle(color: Colors.white),
+                                    style: GoogleFonts.lato(
+                                      color: Colors.white,
+                                    ),
                                   ),
                                 ],
                               ),
@@ -197,7 +207,9 @@ class ProfilePage extends StatelessWidget {
                                   SizedBox(width: 5),
                                   Text(
                                     "Enter new password",
-                                    style: TextStyle(color: Colors.white),
+                                    style: GoogleFonts.lato(
+                                      color: Colors.white,
+                                    ),
                                   ),
                                 ],
                               ),
@@ -219,7 +231,9 @@ class ProfilePage extends StatelessWidget {
                               onTap: () {},
                               child: Text(
                                 "Cancel",
-                                style: TextStyle(color: Colors.deepPurple),
+                                style: GoogleFonts.lato(
+                                  color: Colors.deepPurple,
+                                ),
                               ),
                             ),
                             SizedBox(width: 50),
@@ -235,7 +249,9 @@ class ProfilePage extends StatelessWidget {
                                 child: Center(
                                   child: Text(
                                     "Edit",
-                                    style: TextStyle(color: Colors.white),
+                                    style: GoogleFonts.lato(
+                                      color: Colors.white,
+                                    ),
                                   ),
                                 ),
                               ),
@@ -247,10 +263,10 @@ class ProfilePage extends StatelessWidget {
                   },
                   child: Text(
                     "Change account password",
-                    style: TextStyle(color: Colors.white),
+                    style: GoogleFonts.lato(color: Colors.white),
                   ),
                 ),
-                SizedBox(width: 120),
+                SizedBox(width: 125),
                 Image.asset(
                   "assets/images/angle-small-right.png",
                   color: Colors.white,
@@ -288,7 +304,9 @@ class ProfilePage extends StatelessWidget {
                                 children: [
                                   Text(
                                     "Change account image",
-                                    style: TextStyle(color: Colors.white),
+                                    style: GoogleFonts.lato(
+                                      color: Colors.white,
+                                    ),
                                   ),
                                 ],
                               ),
@@ -313,7 +331,9 @@ class ProfilePage extends StatelessWidget {
                                     padding: const EdgeInsets.only(left: 25),
                                     child: Text(
                                       "Take Picture",
-                                      style: TextStyle(color: Colors.white),
+                                      style: GoogleFonts.lato(
+                                        color: Colors.white,
+                                      ),
                                     ),
                                   ),
                                 ],
@@ -325,7 +345,9 @@ class ProfilePage extends StatelessWidget {
                                     padding: const EdgeInsets.only(left: 25),
                                     child: Text(
                                       "Import from gallery",
-                                      style: TextStyle(color: Colors.white),
+                                      style: GoogleFonts.lato(
+                                        color: Colors.white,
+                                      ),
                                     ),
                                   ),
                                 ],
@@ -337,7 +359,9 @@ class ProfilePage extends StatelessWidget {
                                     padding: const EdgeInsets.only(left: 25),
                                     child: Text(
                                       "Import from Google Drive",
-                                      style: TextStyle(color: Colors.white),
+                                      style: GoogleFonts.lato(
+                                        color: Colors.white,
+                                      ),
                                     ),
                                   ),
                                 ],
@@ -350,10 +374,10 @@ class ProfilePage extends StatelessWidget {
                   },
                   child: Text(
                     "Change account image",
-                    style: TextStyle(color: Colors.white),
+                    style: GoogleFonts.lato(color: Colors.white),
                   ),
                 ),
-                SizedBox(width: 145),
+                SizedBox(width: 150),
                 Image.asset(
                   "assets/images/angle-small-right.png",
                   color: Colors.white,
@@ -375,7 +399,10 @@ class ProfilePage extends StatelessWidget {
                 SizedBox(width: 22),
                 GestureDetector(
                   onTap: () {},
-                  child: Text("Logout", style: TextStyle(color: Colors.white)),
+                  child: Text(
+                    "Logout",
+                    style: GoogleFonts.lato(color: Colors.white),
+                  ),
                 ),
               ],
             ),

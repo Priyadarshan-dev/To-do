@@ -13,19 +13,23 @@ class WelcomeScreen extends StatelessWidget {
       body: SafeArea(
         child: Column(
           children: [
+            SizedBox(height: 20),
             Row(
               children: [
                 Padding(
                   padding: const EdgeInsets.symmetric(
-                    horizontal: 15,
+                    horizontal: 22,
                     vertical: 15,
                   ),
-                  child: IconButton(
-                    onPressed: () {
+                  child: GestureDetector(
+                    onTap: () {
                       Navigator.pop(context);
                     },
-                    icon: Icon(Icons.arrow_back),
-                    color: Colors.white,
+                    child: Image.asset(
+                      "assets/images/angle-left.png",
+                      height: 20,
+                      color: Colors.white,
+                    ),
                   ),
                 ),
               ],
@@ -33,7 +37,7 @@ class WelcomeScreen extends StatelessWidget {
             SizedBox(height: 20),
             Text(
               "Welcome to Uptodo",
-              style: GoogleFonts.urbanist(
+              style: GoogleFonts.lato(
                 fontSize: 35,
                 fontWeight: FontWeight.bold,
                 color: Colors.white,
@@ -42,7 +46,7 @@ class WelcomeScreen extends StatelessWidget {
             SizedBox(height: 20),
             Text(
               "Please login to your account or create\n           new account to continue",
-              style: TextStyle(color: Colors.white, fontSize: 16),
+              style: GoogleFonts.lato(color: Color(0xABFFFFFF), fontSize: 16),
             ),
             SizedBox(height: 390),
             GestureDetector(
@@ -55,16 +59,16 @@ class WelcomeScreen extends StatelessWidget {
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: Container(
-                  height: 40,
-                  width: 350,
+                  height: 48,
+                  width: 327,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(5),
-                    color: Colors.deepPurple,
+                    color: Color(0xFF8875FF),
                   ),
                   child: Center(
                     child: Text(
                       "LOGIN",
-                      style: GoogleFonts.urbanist(
+                      style: GoogleFonts.lato(
                         fontSize: 18,
                         color: Colors.white,
                       ),
@@ -79,17 +83,17 @@ class WelcomeScreen extends StatelessWidget {
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: Container(
-                  height: 40,
-                  width: 350,
+                  height: 48,
+                  width: 327,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(5),
                     color: Colors.transparent,
-                    border: Border.all(color: Colors.deepPurple, width: 3),
+                    border: Border.all(color: Color(0xFF8E7CFF), width: 3),
                   ),
                   child: Center(
                     child: Text(
                       "CREATE ACCOUNT",
-                      style: GoogleFonts.urbanist(
+                      style: GoogleFonts.lato(
                         fontSize: 18,
                         color: Colors.white,
                       ),

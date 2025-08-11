@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:lottie/lottie.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:to_do_task/Components/floating_button.dart';
 import 'package:to_do_task/Pages/edit_task_page.dart';
@@ -14,8 +14,6 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   final TextEditingController searchController = TextEditingController();
-
-
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +32,7 @@ class _HomePageState extends State<HomePage> {
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 25),
                         child: GestureDetector(
-                          onTap: (){},
+                          onTap: () {},
                           child: Image.asset(
                             "assets/images/menu.png",
                             color: Colors.white,
@@ -44,7 +42,10 @@ class _HomePageState extends State<HomePage> {
                       ),
                       Text(
                         "Index",
-                        style: TextStyle(color: Colors.white, fontSize: 18),
+                        style: GoogleFonts.lato(
+                          color: Colors.white,
+                          fontSize: 18,
+                        ),
                       ),
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -61,29 +62,35 @@ class _HomePageState extends State<HomePage> {
                   ),
                   SizedBox(height: 40),
                   if (task.tasks.isEmpty) ...[
-                    Lottie.asset(
-                      "assets/images/Man Filling a List.json",
+                    Image.asset(
+                      "assets/images/todo.png",
                       height: 250,
                     ),
                     SizedBox(height: 10),
                     Text(
                       "What do you want to do today?",
-                      style: TextStyle(fontSize: 20, color: Colors.white),
+                      style: GoogleFonts.lato(
+                        fontSize: 20,
+                        color: Colors.white,
+                      ),
                     ),
                     SizedBox(height: 10),
                     Text(
                       "Tap + to add your tasks",
-                      style: TextStyle(fontSize: 18, color: Colors.white),
+                      style: GoogleFonts.lato(
+                        fontSize: 18,
+                        color: Colors.white,
+                      ),
                     ),
                   ] else ...[
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 20),
                       child: TextField(
                         controller: searchController,
-                        style: TextStyle(color: Colors.white),
+                        style: GoogleFonts.lato(color: Colors.white),
                         decoration: InputDecoration(
                           hintText: "Search tasks...",
-                          hintStyle: TextStyle(color: Colors.white54),
+                          hintStyle: GoogleFonts.lato(color: Colors.white54),
                           filled: true,
                           fillColor: Colors.grey.shade900,
                           border: OutlineInputBorder(),
@@ -116,7 +123,7 @@ class _HomePageState extends State<HomePage> {
                             children: [
                               Text(
                                 "Today",
-                                style: TextStyle(color: Colors.white),
+                                style: GoogleFonts.lato(color: Colors.white),
                               ),
                               Icon(Icons.arrow_downward, color: Colors.white),
                             ],
@@ -132,35 +139,96 @@ class _HomePageState extends State<HomePage> {
                         itemBuilder: (context, index) {
                           final taskData = task.tasks[index];
                           return Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 20),
-                            child: Container(
-                              height: 80,
-                              width: 280,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(5),
-                                color: Colors.grey.shade800,
-                              ),
-                              child: ListTile(
-                                title: Text(
-                                  taskData['task'] ?? '',
-                                  style: const TextStyle(color: Colors.white),
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 20,
+                              vertical: 10,
+                            ),
+                            child: Expanded(
+                              child: Container(
+                                height: 80,
+                                width: 280,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(5),
+                                  color: Colors.grey.shade800,
                                 ),
-                                subtitle: Text(
-                                  taskData['description'] ?? '',
-                                  style: const TextStyle(color: Colors.white70),
-                                ),
-                                leading: GestureDetector(
-                                  onTap: () {
-                                    Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                        builder: (context) => EditTask(),
-                                      ),
-                                    );
-                                  },
-                                  child: Icon(
-                                    Icons.circle_rounded,
-                                    color: Colors.white,
+                                child: ListTile(
+                                  title: Text(
+                                    taskData['task'] ?? '',
+                                    style: GoogleFonts.lato(
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                                  subtitle:
+                                      taskData['time'] != null
+                                          ? Text(
+                                            taskData['time']!,
+                                            style: TextStyle(
+                                              color: Colors.white54,
+                                              fontSize: 12,
+                                            ),
+                                          )
+                                          : null,
+                                  trailing: Container(
+                                    height: 40,
+                                    width: 120,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(5),
+                                    ),
+                                    child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceEvenly,
+                                      children: [
+                                        if (taskData['category'] != null)
+                                          Image.asset(
+                                            "assets/images/${taskData['category']}",
+                                            color: Colors.white,
+                                            height: 20,
+                                          ),
+                                        SizedBox(width: 4),
+                                        Text(
+                                          taskData['categoryName'] ?? '',
+                                          style: GoogleFonts.lato(
+                                            color: Colors.white,
+                                            fontSize: 12,
+                                          ),
+                                        ),
+
+                                        if (taskData['priority'] != null)
+                                          Image.asset(
+                                            "assets/images/flag.png",
+                                            height: 20,
+                                            color: Colors.white,
+                                          ),
+                                        SizedBox(width: 4),
+                                        Text(
+                                          "${taskData['priority']}",
+                                          style: GoogleFonts.lato(
+                                            color: Colors.white,
+                                            fontSize: 12,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                  leading: GestureDetector(
+                                    onTap: () {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder:
+                                              (context) => EditTask(
+                                                taskIndex: index,
+                                                taskData: task.tasks[index],
+                                                onPrioritySelected: (index) {},
+                                              ),
+                                        ),
+                                      );
+                                    },
+                                    child: Image.asset(
+                                      "assets/images/dry-clean.png",
+                                      height: 20,
+                                      color: Colors.white,
+                                    ),
                                   ),
                                 ),
                               ),
@@ -168,30 +236,6 @@ class _HomePageState extends State<HomePage> {
                           );
                         },
                       ),
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        SizedBox(width: 20),
-                        Container(
-                          height: 30,
-                          width: 120,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(5),
-                            color: Colors.grey.shade800,
-                          ),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Text(
-                                "Completed",
-                                style: TextStyle(color: Colors.white),
-                              ),
-                              Icon(Icons.arrow_downward, color: Colors.white),
-                            ],
-                          ),
-                        ),
-                      ],
                     ),
                   ],
                 ],

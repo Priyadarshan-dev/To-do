@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-import 'package:to_do_task/Intro%20Screens/intro_page.dart';
+import 'package:to_do_task/Intro%20Screens/intro_page1.dart';
 import 'package:to_do_task/Intro%20Screens/intro_page2.dart';
 import 'package:to_do_task/Intro%20Screens/intro_page3.dart';
 
@@ -14,7 +15,7 @@ class OnBoardingScreen extends StatefulWidget {
 class _IntroPageState extends State<OnBoardingScreen> {
   final PageController _controller = PageController();
   var introImages = ["intro3", "intro2", "intro1"];
-  var introScreens = [IntroPage(), IntroPage2(), IntroPage3()];
+  var introScreens = [IntroPage1(), IntroPage2(), IntroPage3()];
   int currentIndex = 0;
   @override
   void dispose() {
@@ -40,7 +41,7 @@ class _IntroPageState extends State<OnBoardingScreen> {
                     ),
                     child: Text(
                       "SKIP",
-                      style: TextStyle(fontSize: 18, color: Colors.grey[300]),
+                      style: GoogleFonts.lato(fontSize: 18, color: Color(0x70FFFFFF)),
                     ),
                   ),
                 ),
@@ -52,7 +53,7 @@ class _IntroPageState extends State<OnBoardingScreen> {
               height: 296,
               width: 271,
             ),
-          
+
             SizedBox(height: 40),
             SmoothPageIndicator(
               controller: _controller,
@@ -74,7 +75,7 @@ class _IntroPageState extends State<OnBoardingScreen> {
                     currentIndex = index;
                   });
                 },
-                children: [IntroPage(), IntroPage2(), IntroPage3()],
+                children: [IntroPage1(), IntroPage2(), IntroPage3()],
               ),
             ),
           ],

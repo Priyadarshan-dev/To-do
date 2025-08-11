@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:to_do_task/Components/text_form.dart';
 
 class CategoryScreen extends StatefulWidget {
@@ -9,6 +10,7 @@ class CategoryScreen extends StatefulWidget {
 }
 
 class _CategoryScreenState extends State<CategoryScreen> {
+  Color? selectedColor;
   final List<Color> circleColors = [
     Colors.red,
     Colors.green,
@@ -36,7 +38,7 @@ class _CategoryScreenState extends State<CategoryScreen> {
                   padding: const EdgeInsets.only(top: 35, left: 25),
                   child: Text(
                     "Create New Category",
-                    style: TextStyle(
+                    style: GoogleFonts.lato(
                       color: Colors.white,
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
@@ -53,7 +55,7 @@ class _CategoryScreenState extends State<CategoryScreen> {
                   padding: const EdgeInsets.only(left: 25, top: 10),
                   child: Text(
                     "Category name:",
-                    style: TextStyle(color: Colors.white),
+                    style: GoogleFonts.lato(color: Colors.white),
                   ),
                 ),
               ],
@@ -68,7 +70,7 @@ class _CategoryScreenState extends State<CategoryScreen> {
                   padding: const EdgeInsets.only(left: 25, top: 10),
                   child: Text(
                     "Category icon:",
-                    style: TextStyle(color: Colors.white),
+                    style: GoogleFonts.lato(color: Colors.white),
                   ),
                 ),
               ],
@@ -91,7 +93,7 @@ class _CategoryScreenState extends State<CategoryScreen> {
                       child: Center(
                         child: Text(
                           "Choose icon from library",
-                          style: TextStyle(color: Colors.white),
+                          style: GoogleFonts.lato(color: Colors.white),
                         ),
                       ),
                     ),
@@ -107,7 +109,7 @@ class _CategoryScreenState extends State<CategoryScreen> {
                   padding: const EdgeInsets.only(left: 26, top: 10),
                   child: Text(
                     "Category color:",
-                    style: TextStyle(color: Colors.white),
+                    style: GoogleFonts.lato(color: Colors.white),
                   ),
                 ),
               ],
@@ -122,12 +124,26 @@ class _CategoryScreenState extends State<CategoryScreen> {
                   for (int i = 0; i < 10; i++)
                     Padding(
                       padding: const EdgeInsets.only(left: 12),
-                      child: Container(
-                        height: 40,
-                        width: 40,
-                        decoration: ShapeDecoration(
-                          shape: CircleBorder(),
-                          color: circleColors[i],
+                      child: GestureDetector(
+                        onTap: () {
+                          setState(() {
+                            selectedColor = circleColors[i];
+                          });
+                        },
+                        child: Stack(
+                          alignment: Alignment.center,
+                          children: [
+                            Container(
+                              height: 40,
+                              width: 40,
+                              decoration: ShapeDecoration(
+                                shape: CircleBorder(),
+                                color: circleColors[i],
+                              ),
+                            ),
+                            if (selectedColor == circleColors[i])
+                              Icon(Icons.check, color: Colors.white),
+                          ],
                         ),
                       ),
                     ),
@@ -144,23 +160,23 @@ class _CategoryScreenState extends State<CategoryScreen> {
                   },
                   child: Text(
                     "Cancel",
-                    style: TextStyle(color: Colors.deepPurple),
+                    style: GoogleFonts.lato(color: Colors.deepPurple),
                   ),
                 ),
                 SizedBox(width: 100),
                 GestureDetector(
                   onTap: () {},
                   child: Container(
-                    height: 40,
-                    width: 150,
+                    height: 48,
+                    width: 158,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(5),
-                      color: Colors.deepPurple,
+                      color: Color(0xFF8687E7),
                     ),
                     child: Center(
                       child: Text(
                         "Create Category",
-                        style: TextStyle(color: Colors.white),
+                        style: GoogleFonts.lato(color: Colors.white),
                       ),
                     ),
                   ),

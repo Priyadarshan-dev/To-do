@@ -32,14 +32,16 @@ class _BottomNavBarState extends State<BottomNavBar> {
     return Scaffold(
       body: _pages[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.grey.shade900,
+        backgroundColor: Color(0xFF363636),
         currentIndex: _selectedIndex,
         onTap: _navigateBottomBar,
+        selectedItemColor: Colors.white,
+          unselectedItemColor: Colors.white,
         type: BottomNavigationBarType.fixed,
         items: [
           BottomNavigationBarItem(
             icon: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 30,vertical: 10),
+              padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
               child: Image.asset(
                 "assets/images/index.png",
                 color: Colors.white,
@@ -50,7 +52,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
           ),
           BottomNavigationBarItem(
             icon: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 30,vertical: 10),
+              padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
               child: Image.asset(
                 "assets/images/calendar.png",
                 color: Colors.white,
@@ -61,22 +63,22 @@ class _BottomNavBarState extends State<BottomNavBar> {
           ),
           BottomNavigationBarItem(
             icon: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 30,vertical: 10),
+              padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
               child: Image.asset(
                 "assets/images/clock-five.png",
                 color: Colors.white,
-                 height: 30,
+                height: 30,
               ),
             ),
             label: "focus",
           ),
           BottomNavigationBarItem(
             icon: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 30,vertical: 10),
+              padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
               child: Image.asset(
                 "assets/images/user.png",
                 color: Colors.white,
-                 height: 30,
+                height: 30,
               ),
             ),
             label: "Profile",

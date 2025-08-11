@@ -12,7 +12,7 @@ class TextForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 25),
+      padding: const EdgeInsets.symmetric(horizontal: 35),
       child: TextField(
         obscureText: obscureText,
         decoration: InputDecoration(

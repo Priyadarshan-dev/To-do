@@ -18,19 +18,23 @@ class _LoginScreenState extends State<LoginScreen> {
       body: SafeArea(
         child: Column(
           children: [
+            SizedBox(height: 20),
             Row(
               children: [
                 Padding(
                   padding: const EdgeInsets.symmetric(
-                    horizontal: 15,
+                    horizontal: 25,
                     vertical: 15,
                   ),
-                  child: IconButton(
-                    onPressed: () {
+                  child: GestureDetector(
+                    onTap: () {
                       Navigator.pop(context);
                     },
-                    icon: Icon(Icons.arrow_back),
-                    color: Colors.white,
+                    child: Image.asset(
+                      "assets/images/angle-left.png",
+                      height: 20,
+                      color: Colors.white,
+                    ),
                   ),
                 ),
               ],
@@ -44,7 +48,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                   child: Text(
                     "Login",
-                    style: GoogleFonts.urbanist(
+                    style: GoogleFonts.lato(
                       fontSize: 25,
                       fontWeight: FontWeight.bold,
                       color: Colors.white,
@@ -56,6 +60,7 @@ class _LoginScreenState extends State<LoginScreen> {
             SizedBox(height: 30),
             Row(
               children: [
+                SizedBox(width: 10),
                 Padding(
                   padding: const EdgeInsets.symmetric(
                     horizontal: 25,
@@ -63,10 +68,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                   child: Text(
                     "Username",
-                    style: GoogleFonts.urbanist(
-                      color: Colors.white,
-                      fontSize: 17,
-                    ),
+                    style: GoogleFonts.lato(color: Colors.white, fontSize: 17),
                   ),
                 ),
               ],
@@ -75,6 +77,7 @@ class _LoginScreenState extends State<LoginScreen> {
             SizedBox(height: 20),
             Row(
               children: [
+                 SizedBox(width: 10),
                 Padding(
                   padding: const EdgeInsets.symmetric(
                     horizontal: 25,
@@ -82,10 +85,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                   child: Text(
                     "Password",
-                    style: GoogleFonts.urbanist(
-                      color: Colors.white,
-                      fontSize: 17,
-                    ),
+                    style: GoogleFonts.lato(color: Colors.white, fontSize: 17),
                   ),
                 ),
               ],
@@ -97,16 +97,16 @@ class _LoginScreenState extends State<LoginScreen> {
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 25),
                 child: Container(
-                  height: 40,
-                  width: 350,
+                  height: 48,
+                  width: 327,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(5),
-                    color: Colors.deepPurple,
+                    color: Color(0xFF8687E7),
                   ),
                   child: Center(
                     child: Text(
                       "Login",
-                      style: GoogleFonts.urbanist(
+                      style: GoogleFonts.lato(
                         fontSize: 18,
                         color: Colors.white,
                       ),
@@ -124,7 +124,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     child: Divider(thickness: 1, color: Colors.white),
                   ),
                 ),
-                Text("or", style: GoogleFonts.urbanist(color: Colors.white)),
+                Text("or", style: GoogleFonts.lato(color: Colors.white)),
                 Expanded(
                   child: Padding(
                     padding: const EdgeInsets.only(right: 25, left: 4),
@@ -139,21 +139,26 @@ class _LoginScreenState extends State<LoginScreen> {
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: Container(
-                  height: 50,
-                  width: 350,
+                  height: 48,
+                  width: 327,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(5),
                     color: Colors.transparent,
                     border: Border.all(color: Colors.deepPurple, width: 2),
                   ),
-                  child: Center(
-                    child: Text(
-                      "Login with Google",
-                      style: GoogleFonts.urbanist(
-                        fontSize: 18,
-                        color: Colors.white,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Image.asset("assets/images/search.png", height: 20),
+                      SizedBox(width: 10),
+                      Text(
+                        "Login with Google",
+                        style: GoogleFonts.lato(
+                          fontSize: 18,
+                          color: Colors.white,
+                        ),
                       ),
-                    ),
+                    ],
                   ),
                 ),
               ),
@@ -164,21 +169,30 @@ class _LoginScreenState extends State<LoginScreen> {
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: Container(
-                  height: 50,
-                  width: 350,
+                  height: 48,
+                  width: 327,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(5),
                     color: Colors.transparent,
                     border: Border.all(color: Colors.deepPurple, width: 2),
                   ),
-                  child: Center(
-                    child: Text(
-                      "Login with Apple",
-                      style: GoogleFonts.urbanist(
-                        fontSize: 18,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Image.asset(
+                        "assets/images/apple.png",
+                        height: 20,
                         color: Colors.white,
                       ),
-                    ),
+                      SizedBox(width: 10),
+                      Text(
+                        "Login with Apple",
+                        style: GoogleFonts.lato(
+                          fontSize: 18,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ],
                   ),
                 ),
               ),
@@ -189,7 +203,7 @@ class _LoginScreenState extends State<LoginScreen> {
               children: [
                 Text(
                   "Don't have an account?",
-                  style: TextStyle(color: Colors.grey.shade400),
+                  style: GoogleFonts.lato(color: Colors.grey.shade400),
                 ),
                 GestureDetector(
                   onTap: () {
@@ -200,7 +214,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   },
                   child: Text(
                     "Register",
-                    style: TextStyle(color: Colors.white),
+                    style: GoogleFonts.lato(color: Colors.white),
                   ),
                 ),
               ],
